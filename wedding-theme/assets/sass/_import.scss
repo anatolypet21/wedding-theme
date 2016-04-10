@@ -1,0 +1,107 @@
+$clouds: rgba( 245, 245, 245, 1 );
+$turquoise: #1ABC9C;
+$green-sea: #16A085;
+$midnight-blue: #2C3E50;
+$pomgranate: #E74C3C;
+$observatory: #049372;
+$redical-red: #EE7469;
+$wax-flower: #F1A9A0;
+$wax-flower-with-opecity: rgba(1,1,1,0);
+// $wax-flower-with-opecity: rgba(241,169,160,0.74);
+$creame: #FFF0D6;
+$wood: #3B0102;
+$purple: #8e44ad;
+$text-one: #4f3b3b;
+$text-two: #fff;
+$text-purple: #8e44ad;
+
+// $footer-height: 45%;
+
+@mixin transition($val){
+  -webkit-transition: $val;
+  -moz-transition: $val;
+  -o-transition: $val;
+  transition: $val;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($val) {
+  -moz-box-shadow: $val;
+  -webkit-box-shadow: $val;
+  box-shadow: $val;
+}
+
+@mixin box-sizing{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0px; //so website do not touch the browser window
+  padding: 0;
+  height: 100%;   /* The html and body elements cannot have any padding or margin. */
+  -webkit-font-smoothing: antialiased; //smooth the font on mac
+  font-family: "Helvetica", Arial; //defaut font , fallback to Arial since some browser do not support Helvatica
+  font-weight: normal;
+  font-size:16px;
+  color: #666; //default font color. this is to override any existing font color on users browser.
+}
+
+.body-skin{
+    // background-color: #e94e77;
+    background-repeat: repeat;
+    // background-position: top left;
+    // background-attachment: scroll;
+    // background-size: 26px
+}
+
+
+
+/* Wrapper for page content to push down footer */
+// #wrap {
+  // min-height: 100%;
+  // height: auto !important;
+  // height: 100%;
+  /* Negative indent footer by it's height */
+  // margin: 0 auto -$footer-height;
+// }
+//
+// /* Set the fixed height of the footer here */
+//  #push,
+//  #footer {
+//    height: $footer-height;
+//  }
+
+ /* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+.background-wrap{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.top-margin{
+    margin-top: 7%;
+}
+
+.ProximaNovaA-Thin { font-family: ProximaNovaA-Thin  }
+.ProximaNovaS-Thin { font-family: ProximaNovaS-Thin; }
+.ProximaNovaA-ThinIt { font-family: ProximaNovaA-ThinIt; }
+.ProximaNovaT-Thin { font-family: ProximaNovaT-Thin; }
+.ProximaNovaS-ThinIt { font-family: ProximaNovaS-ThinIt; }
+.ProximaNova-ThinIt { font-family: ProximaNova-ThinIt; }

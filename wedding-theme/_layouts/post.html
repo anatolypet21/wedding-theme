@@ -1,0 +1,54 @@
+<html>
+    <head>
+        {% include head.html %}
+        <link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+    </head>
+    <body class="body-skin"  style="background-image: url('{{site.github.url}}/assets/images/body-skin.jpg');">
+        {% include navigation.html %}
+        <div class="background-wrap top-margin">
+            <div class="row post-top-frame" style="background: url({{ site.github.url }}{{ page.image}}) no-repeat center center fixed;">
+                <div class="container">
+                    <div class="row tag-line">
+                        <div class='col-sm-12 text-center'>
+                            <h1>
+                                {{page.title}}
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="jumbotron">
+                <div class="container">
+                    <div class="row margin-4">
+                        <div class='col-sm-8'>
+
+                            <h2>{{page.title}}</h2>
+                            <p>
+                                {{page.description}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='col-sm-8'>
+                            {{content}}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class='row'>
+                          <div class='col-sm-6 text-left'>
+                              {% if page.previous.url %}
+                              <a href="{{ site.url }}{{page.previous.url}}"><-- <b>Previous:</b> {{ page.previous.title }}</a>
+                              {% endif %}
+                          </div>
+                          <div class='col-sm-6 text-right'>
+                              {% if page.next.url %}
+                                <a href="{{ site.url }}{{page.next.url}}"><b>Next:</b> {{ page.next.title }}  --></a>
+                              {% endif %}
+                          </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </body>
+    {% include footer.html %}
+</html>
