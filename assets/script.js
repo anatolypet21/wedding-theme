@@ -22,7 +22,7 @@ init = function () {
     };
 
     $('img').preload(function(perc, done) {
-        console.log(this, perc, done);
+       
     });
 
     //adding carousel avoid using bootstrap data tags for JS events. it get un manageable soon.
