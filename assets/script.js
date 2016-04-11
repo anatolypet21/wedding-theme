@@ -31,7 +31,7 @@ $.fn.preload = function() {
 }
 
 // Usage:
-var pathname = window.location.pathname; // Returns path only
+var pathname = window.location.href; 
 $([pathname + "/assets/images/back.jpg",pathname + "/assets/images/post/image1.jpg",pathname + "/assets/images/post/image2.jpg", pathname + "/assets/images/post/image3.jpg", pathname + "/assets/images/post/image4.jpg", pathname + "/assets/images/post/image5.jpg",pathname + "/assets/images/post/image6.jpg"]).preload();
 
 var carousel_slider = function(){
