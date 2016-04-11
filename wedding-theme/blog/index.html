@@ -1,0 +1,23 @@
+---
+layout: default
+title: All Posts
+---
+
+<div id="wrap"  class='posts background-wrap top-margin'>
+    <div class="container">
+        <div class="row">
+            <div class='col-sm-12'>
+                <h1>{{page.title}}</h1>
+            </div>
+        </div>
+          {% for post in paginator.posts %}
+                {% include post-row.html %}
+          {% endfor %}
+    </div>
+
+
+    {% if paginator.total_pages > 1 %}
+        {% include pagination.html %}
+    {% endif %}
+    <div id="push"></div>
+</div>
