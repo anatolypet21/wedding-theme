@@ -42,6 +42,8 @@ function preloader() {
     img5.src = pathname + "/assets/images/post/image4.jpg";
     img6.src = pathname + "/assets/images/post/image5.jpg";
     img7.src = pathname + "/assets/images/post/image6.jpg";
+
+    console.log(img7.src);
     
     
   }
