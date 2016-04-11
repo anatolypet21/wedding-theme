@@ -26,11 +26,12 @@ init = function () {
 $.fn.preload = function() {
     this.each(function(){
         $('<img/>')[0].src = this;
+        console.log(this);
     });
 }
 
 // Usage:
-
+var pathname = window.location.pathname; // Returns path only
 $([pathname + "/assets/images/back.jpg",pathname + "/assets/images/post/image1.jpg",pathname + "/assets/images/post/image2.jpg", pathname + "/assets/images/post/image3.jpg", pathname + "/assets/images/post/image4.jpg", pathname + "/assets/images/post/image5.jpg",pathname + "/assets/images/post/image6.jpg"]).preload();
 
 var carousel_slider = function(){
