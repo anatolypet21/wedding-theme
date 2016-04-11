@@ -23,6 +23,43 @@ init = function () {
     );
 };
 
+function preloader() {
+  if (document.images) {
+    var img1 = new Image();
+    var img2 = new Image();
+    var img3 = new Image();
+    var img4 = new Image();
+    var img5 = new Image();
+    var img6 = new Image();
+    var img7 = new Image();
+
+    var pathname = window.location.pathname;
+
+    img1.src = pathname + "/assets/images/back.jpg";
+    img2.src = pathname + "/assets/images/post/image1.jpg";
+    img3.src = pathname + "/assets/images/post/image2.jpg";
+    img4.src = pathname + "/assets/images/post/image3.jpg";
+    img5.src = pathname + "/assets/images/post/image4.jpg";
+    img6.src = pathname + "/assets/images/post/image5.jpg";
+    img7.src = pathname + "/assets/images/post/image6.jpg";
+    
+    
+  }
+}
+function addLoadEvent(func) {
+  var oldonload = window.onload;
+  if (typeof window.onload != 'function') {
+    window.onload = func;
+  } else {
+    window.onload = function() {
+      if (oldonload) {
+        oldonload();
+      }
+      func();
+    }
+  }
+}
+addLoadEvent(preloader);
 
 var carousel_slider = function(){
     $('#carousel').slick({
