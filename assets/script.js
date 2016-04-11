@@ -23,7 +23,6 @@ init = function () {
     );
 };
 
-$("img.lazy").lazyload();
 
 var carousel_slider = function(){
     $('#carousel').slick({
