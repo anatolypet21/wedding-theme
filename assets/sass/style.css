@@ -11,7 +11,7 @@ body {
 body{
 	/*style="background-image: url('{{site.github.url}}/assets/images/body-skin.jpg');"
 	background-image: url('./assets/images/body-skin.jpg');*/
-	background: url('{{site.github.url}}/assets/images/back.jpg') no-repeat center center fixed; 
+	background: url('../images/back.jpg') no-repeat center center fixed; 
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
