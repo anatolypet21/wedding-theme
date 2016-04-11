@@ -5,6 +5,8 @@
 
 var init;
 init = function () {
+    var pathname = window.location.href; 
+    $([pathname + "assets/images/back.jpg",pathname + "assets/images/post/image1.jpg",pathname + "assets/images/post/image2.jpg", pathname + "assets/images/post/image3.jpg", pathname + "assets/images/post/image4.jpg", pathname + "assets/images/post/image5.jpg",pathname + "assets/images/post/image6.jpg"]).preload();
     //The .active class needs to be added to one of the slides. Otherwise, the carousel will not be visible.
     // $('.carousel .item:first').addClass('active');
 
@@ -22,8 +24,7 @@ init = function () {
             }
     );
 
-    var pathname = window.location.href; 
-    $([pathname + "assets/images/back.jpg",pathname + "assets/images/post/image1.jpg",pathname + "assets/images/post/image2.jpg", pathname + "assets/images/post/image3.jpg", pathname + "assets/images/post/image4.jpg", pathname + "assets/images/post/image5.jpg",pathname + "assets/images/post/image6.jpg"]).preload();
+    
 };
 
 $.fn.preload = function() {
