@@ -64,6 +64,7 @@ var carousel_slider = function(){
 }
 
 var featured_slider = function(){
+  console.log('featured');
     $('.lazy').slick({
       lazyLoad: 'ondemand',
       slidesToShow: 3,
