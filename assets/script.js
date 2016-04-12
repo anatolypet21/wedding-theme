@@ -53,6 +53,7 @@ $.fn.preload = function() {
 
 
 var carousel_slider = function(){
+  console.log('carousel');
     $('#carousel').slick({
         lazyLoad: 'ondemand',
         autoplay: true,
@@ -65,7 +66,7 @@ var carousel_slider = function(){
 
 var featured_slider = function(){
   console.log('featured');
-    $('.lazy').slick({
+    $('#featured .lazy').slick({
       lazyLoad: 'ondemand',
       slidesToShow: 3,
       slidesToScroll: 1,
