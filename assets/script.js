@@ -10,7 +10,7 @@ init = function () {
     //The .active class needs to be added to one of the slides. Otherwise, the carousel will not be visible.
     // $('.carousel .item:first').addClass('active');
 
-    /*$.fn.preload = function (fn) {
+    $.fn.preload = function (fn) {
         var len = this.length, i = 0;
         return this.each(function () {
             var tmp = new Image, self = this;
@@ -23,7 +23,7 @@ init = function () {
 
     $('img').preload(function(perc, done) {
        
-    });*/
+    });
 
     //adding carousel avoid using bootstrap data tags for JS events. it get un manageable soon.
     carousel_slider()
@@ -70,8 +70,8 @@ var featured_slider = function(){
       lazyLoad: 'ondemand',
       slidesToShow: 3,
       slidesToScroll: 1,
-      autoplay: false,
-      autoplaySpeed: 2000,
+      autoplay: true,
+      autoplaySpeed: 3000,
       adaptiveHeight: true,
       arrows: true,
       prevArrow: $('.nvgt#prev'),
