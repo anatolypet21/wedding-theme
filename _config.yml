@@ -45,13 +45,12 @@ assets:
     - "bundle.css"
   digest: true
   sources:
-    - _assets/css
-    - _assets/images
-    - _assets/javascripts
+    - _assets/sass
+    - _assets/images/post
+    - _assets/libs
     - _assets/stylesheets
     - _assets/fonts
-    - _assets/img
-    - _assets/js
+    - _assets/libs/slick-1.5.9
   features:
     liquid: true
     automatic_img_size: true
