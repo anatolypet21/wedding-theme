@@ -5,8 +5,25 @@
 
 var init;
 init = function () {
+    //var pathname = window.location.href; 
+    //$([pathname + "assets/images/back.jpg",pathname + "assets/images/post/image1.jpg",pathname + "assets/images/post/image2.jpg", pathname + "assets/images/post/image3.jpg", pathname + "assets/images/post/image4.jpg", pathname + "assets/images/post/image5.jpg",pathname + "assets/images/post/image6.jpg"]).preload();
     //The .active class needs to be added to one of the slides. Otherwise, the carousel will not be visible.
     // $('.carousel .item:first').addClass('active');
+
+    $.fn.preload = function (fn) {
+        var len = this.length, i = 0;
+        return this.each(function () {
+            var tmp = new Image, self = this;
+            if (fn) tmp.onload = function () {
+                fn.call(self, 100 * ++i / len, i === len);
+            };
+            tmp.src = this.src;
+        });
+    };
+
+    $('img').preload(function(perc, done) {
+       
+    });
 
     //adding carousel avoid using bootstrap data tags for JS events. it get un manageable soon.
     carousel_slider()
@@ -21,10 +38,22 @@ init = function () {
                 $(this).find('.caption').slideUp(250); //.fadeOut(205)
             }
     );
+
+    
 };
+
+$.fn.preload = function() {
+    this.each(function(){
+        $('<img/>')[0].src = this;
+        console.log(this);
+    });
+}
+
+// Usage:
 
 
 var carousel_slider = function(){
+  console.log('carousel');
     $('#carousel').slick({
         lazyLoad: 'ondemand',
         autoplay: true,
@@ -36,12 +65,13 @@ var carousel_slider = function(){
 }
 
 var featured_slider = function(){
-    $('.lazy').slick({
+  console.log('featured');
+    $('#featured .lazy').slick({
       lazyLoad: 'ondemand',
       slidesToShow: 3,
       slidesToScroll: 1,
       autoplay: false,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 3000,
       adaptiveHeight: true,
       arrows: true,
       prevArrow: $('.nvgt#prev'),
