@@ -8,7 +8,7 @@ include: ['_pages']
 # jekyll-feed The plugin will automatically generate an Atom feed at /feed.xml.
 
 # HOW TO INSTALL - >  sudo gem install jekyll-sitemap jekyll-feed
-gems: [jekyll-sitemap,jekyll-feed,jekyll-paginate,jekyll-archives]
+gems: [jekyll-sitemap,jekyll-feed,jekyll-paginate,jekyll-archives,jekyll-assets]
 
 # how many post to show in ALL POST and FEATURED POST
 paginate: 6
@@ -30,3 +30,29 @@ jekyll-archives:
     day: '/:year/:month/:day/'
     tag: '/tag/:name/'
     category: '/category/:name/'
+
+assets:
+  compress:
+    css: false | true | default - development: false, production: true
+    js: false | true | default - development: false, production: true
+  cache: false | directory | default: .asset-cache
+  cdn: https://cdn.example.com
+  skip_baseurl_with_cdn: false
+  skip_prefix_with_cdn: false
+  prefix: "/assets"
+  assets:
+    - "*.png"
+    - "bundle.css"
+  digest: true
+  sources:
+    - _assets/css
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/fonts
+    - _assets/img
+    - _assets/js
+  features:
+    liquid: true | false | default: false
+    automatic_img_size: true | false | default: true
+    automatic_img_alt : true | false | default: true
