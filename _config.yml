@@ -33,9 +33,9 @@ jekyll-archives:
 
 assets:
   compress:
-    css: false | true | default - development: false, production: true
-    js: false | true | default - development: false, production: true
-  cache: false | directory | default: .asset-cache
+    css: true
+    js: true
+  cache: .asset-cache
   cdn: https://cdn.example.com
   skip_baseurl_with_cdn: false
   skip_prefix_with_cdn: false
@@ -53,6 +53,6 @@ assets:
     - _assets/img
     - _assets/js
   features:
-    liquid: true | false | default: false
-    automatic_img_size: true | false | default: true
-    automatic_img_alt : true | false | default: true
+    liquid: true
+    automatic_img_size: true
+    automatic_img_alt : true
