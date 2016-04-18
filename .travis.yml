@@ -1,2 +1,9 @@
 language: ruby
-script: "bundle exec jekyll build"
+cache: bundler
+branches:
+  only:
+    - gh-pages
+script: 
+  - bundle exec jekyll algolia push
+rvm:
+ - 2.2

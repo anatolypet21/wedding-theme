@@ -8,8 +8,29 @@ include: ['_pages']
 # jekyll-feed The plugin will automatically generate an Atom feed at /feed.xml.
 
 # HOW TO INSTALL - >  sudo gem install jekyll-sitemap jekyll-feed
-gems: [jekyll-sitemap,jekyll-feed,jekyll-paginate,jekyll-archives,jekyll-assets]
-
+gems: [jekyll-sitemap,jekyll-feed,jekyll-paginate,jekyll-archives,jekyll-assets,algoliasearch-jekyll]
+algolia:
+  application_id: 'OESQP1EJVV'
+  index_name: 'wedding-theme'
+  read_only_api_key: 'fd716e7bf911ce99c90728284d3eb4ea'
+  excluded_files:
+    - 404.html
+    - index.html
+  settings:
+    attributeForDistinct: 'hierarchy'
+    distinct: true
+    attributesToSnippet: ['text:20']
+    attributesToIndex:
+      - title
+      - h1
+      - h2
+      - h3
+      - h4
+      - h5
+      - h6
+      - unordered(text)
+      - unordered(tags)
+    
 # how many post to show in ALL POST and FEATURED POST
 paginate: 6
 
