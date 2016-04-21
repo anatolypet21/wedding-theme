@@ -16,43 +16,4 @@ paginate: 6
 
 paginate_path: "/blog/page:num/"
 
-jekyll-archives:
-  enabled:
-    - year
-    - month
-    - categories
-    - tags
-  layouts:
-    year: archive-time
-    month: archive-time
-  permalinks:
-    year: '/:year/'
-    month: '/:year/:month/'
-    day: '/:year/:month/:day/'
-    tag: '/tag/:name/'
-    category: '/category/:name/'
 
-assets:
-  compress:
-    css: true
-    js: true
-  cache: .asset-cache
-  
-  skip_baseurl_with_cdn: false
-  skip_prefix_with_cdn: false
-  prefix: "/assets"
-  assets:
-    - "*.png"
-    - "bundle.css"
-  digest: true
-  sources:
-    - _assets/sass
-    - _assets/images/post
-    - _assets/libs
-    - _assets/stylesheets
-    - _assets/fonts
-    - _assets/libs/slick-1.5.9
-  features:
-    liquid: true
-    automatic_img_size: true
-    automatic_img_alt : true
