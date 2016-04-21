@@ -8,17 +8,8 @@ include: ['_pages']
 # jekyll-feed The plugin will automatically generate an Atom feed at /feed.xml.
 
 # HOW TO INSTALL - >  sudo gem install jekyll-sitemap jekyll-feed
-# Algolia
-gems:
-  - algoliasearch-jekyll
+gems: [jekyll-sitemap,jekyll-feed,jekyll-paginate,jekyll-archives,jekyll-assets]
 
-algolia:
-  application_id: 'latency'
-  index_name: 'jekyll'
-  read_only_api_key: '6be0576ff61c053d5f9a3225e2a90f76'
-  excluded_files:
-    - 404.html
-    - index.html
 
 # how many post to show in ALL POST and FEATURED POST
 paginate: 6
