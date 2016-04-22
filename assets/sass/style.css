@@ -68,7 +68,7 @@ body{background:url('../images/heart-back.jpg') repeat center center fixed; back
 .post-top-frame{-webkit-background-size:cover !important;-moz-background-size:cover !important;-o-background-size:cover !important;background-size:cover !important;height:950px;margin-left:0px !important;margin-right:0px !important;}
 .tag-line{margin-top:20%;color:#fff !important;}
 .tag-line h1{font-weight:bold;font-family:'Cherry Swash', cursive;}
-.jumbotron{color:#FFF;font-family:'Cherry Swash', cursive;background-color:rgba(1,1,1,0);}
+.jumbotron{color:#8e44ad;font-family:'Cherry Swash', cursive;background-color:rgba(1,1,1,0);}
 .jumbotron a{color:#FFF;}
 .posts{background-color:rgba(1,1,1,0);}
 .posts .well{font-family:'Cherry Swash', cursive;}
