@@ -43,7 +43,7 @@ body{background:url('../images/heart-back.jpg') repeat center center fixed; back
 #featured{background-color:rgba(1,1,1,0);color:#8e44ad;overflow:hidden;font-weight:bold;}
 #featured h3{margin-top:5%;margin-bottom:10%;font-family:'Cherry Swash', cursive;font-size:45px;color:#FFF;}
 #featured .slick-slide{max-height:450px;padding-bottom:0;margin-bottom:0;}
-#featured .col-sm-12{position:relative;-moz-box-shadow:2px 2px 3px rgba(0,0,0,0.3);-webkit-box-shadow:2px 2px 3px rgba(0,0,0,0.3);box-shadow:2px 2px 3px rgba(0,0,0,0.3);}
+#featured .col-sm-12{position:relative;/*-moz-box-shadow:2px 2px 3px rgba(0,0,0,0.3);-webkit-box-shadow:2px 2px 3px rgba(0,0,0,0.3);box-shadow:2px 2px 3px rgba(0,0,0,0.3);*/}
 #featured .lazy{position:relative;}
 #featured .lazy a:hover,#featured .lazy a:focus{text-decoration:none;}
 #featured .lazy h2{color:#8e44ad;margin-top:1em;margin-bottom:2em;}
